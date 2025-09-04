@@ -4,10 +4,8 @@ import { useRouter, useSearchParams } from 'next/navigation'
 
 import { flexRender, getCoreRowModel, useReactTable } from '@tanstack/react-table'
 import { useSuspenseQuery } from '@tanstack/react-query'
-
 import { ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from 'lucide-react'
 
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 import { columns } from './DashboardTable.constants'
 import { dashboardListOptions } from '@/libs/queries/dashboard-queries'
 import { dashboardTableSchema } from './DashboardTable.schemas'
@@ -15,6 +13,12 @@ import Button from '@/components/ui/button'
 import Card from '@/components/ui/card'
 import { nextSearchParamsToObj, objectToSearchParams } from '@/utils/params'
 import { DEFAULT_LIMIT, DEFAULT_PAGE } from '@/constants/fetcher'
+import Table from '@/components/ui/table'
+import TableHeader from '@/components/ui/table/table-header'
+import TableRow from '@/components/ui/table/table-row'
+import TableHead from '@/components/ui/table/table-head'
+import TableBody from '@/components/ui/table/table-body'
+import TableCell from '@/components/ui/table/table-cell'
 
 const DashboardTable = () => {
   const router = useRouter()
